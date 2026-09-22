@@ -1,0 +1,24 @@
+# Entorno virtual
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Datos locales
+data/raw/*
+!data/raw/.gitkeep
+
+# Archivos temporales
+*.tmp
+*.log
