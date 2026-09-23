@@ -35,6 +35,16 @@ docker compose up -d
 
 Consulta [la documentación del esquema](docs/database-schema.md) para el detalle de entidades, relaciones y decisiones de diseño.
 
+## ERP + CRM MVP
+
+Con PostgreSQL iniciado, ejecuta:
+
+```bash
+uv run uvicorn src.app.main:app --reload
+```
+
+Abre `http://127.0.0.1:8000`. La interfaz escribe directamente en PostgreSQL; consulta [la guía del ERP/CRM](docs/erp-crm.md).
+
 ---
 
 # Plantilla Python Analytics

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Facturas</h2><table><tr><th>ID</th><th>Cliente</th><th>Fecha</th><th>Estado</th><th>Total neto</th></tr>{% for r in records %}<tr><td>{{r.invoice_id}}</td><td>{{r.company_name}}</td><td>{{r.invoice_date}}</td><td>{{r.status}}</td><td>{{r.total_amount}}</td></tr>{% endfor %}</table>{% endblock %}

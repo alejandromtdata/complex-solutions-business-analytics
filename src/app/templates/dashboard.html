@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Resumen operativo</h2><section class="cards">{% for key,value in metrics.items() %}<div><small>{{key}}</small><strong>{{value}}</strong></div>{% endfor %}</section><p>Datos consultados directamente desde PostgreSQL.</p>{% endblock %}
