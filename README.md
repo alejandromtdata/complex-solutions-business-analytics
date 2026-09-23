@@ -6,6 +6,8 @@ Base de un proyecto de portfolio para analizar ventas, rentabilidad, clientes, i
 
 Requisitos: Docker y Docker Compose.
 
+El puerto local predeterminado es `5433`, para no interferir con una instalación local de PostgreSQL en `5432`. Puede modificarse en `.env`.
+
 ```bash
 cp .env.example .env
 docker compose up -d
