@@ -31,10 +31,9 @@ def health() -> dict[str,str]:
     with db() as conn: conn.execute("SELECT 1")
     return {"status":"ok"}
 
-@app.get("/", response_class=HTMLResponse)
-def home(request: Request):
-    with db() as conn: metrics=services.dashboard(conn)
-    return render(request,"dashboard.html",metrics=metrics)
+@app.get("/")
+def home():
+    return RedirectResponse("/customers", status_code=303)
 
 @app.get("/customers", response_class=HTMLResponse)
 def customers(request: Request, q: str = ""):
