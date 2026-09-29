@@ -87,9 +87,9 @@ CREATE TABLE inventory_movements (
     quantity INTEGER NOT NULL CHECK (
         quantity <> 0
         AND (movement_type = 'PURCHASE' AND quantity > 0
-             OR movement_type = 'SALE' AND quantity < 0
-             OR movement_type = 'RETURN' AND quantity > 0
-             OR movement_type = 'ADJUSTMENT')
+            OR movement_type = 'SALE' AND quantity < 0
+            OR movement_type = 'RETURN' AND quantity > 0
+            OR movement_type = 'ADJUSTMENT')
     ),
     unit_cost NUMERIC(12,2) NOT NULL CHECK (unit_cost >= 0)
 );
